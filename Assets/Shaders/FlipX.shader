@@ -60,10 +60,10 @@ Shader "Custom/FlipX"
 			// Returns the color of the pixel at the given position
 			fixed4 frag (v2f i) : SV_Target
 			{
-			    if (i.texcoord.x < 0.5)
-			    {
-			    	i.texcoord.x = 1 - i.texcoord.x;
-			    }
+				// Mirror position if left of 0.5
+			    // if (i.texcoord.x < 0.5)
+			    //	i.texcoord.x = 1 - i.texcoord.x;
+
 				fixed4 color = tex2D(_MainTex, i.texcoord);  // get the color of the texture at that position
 				return color;
 			}

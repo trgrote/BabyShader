@@ -6,15 +6,15 @@ Shader "Custom/Color"
 	// scripts
 	Properties
 	{
-		_Color ("Color Tint", Color) = (1,1,1,1)
+		// _Color ("Color Tint", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
 		// Area to specify Tags and other shader configurations
 		// No culling or depth
-		/*Cull Off*/
-		/*ZWrite Off*/
-		/*ZTest Always*/
+		//Cull Off
+		//ZWrite Off
+		//ZTest Always
 
 		// A subshader can have multiple passes
 		Pass
@@ -52,14 +52,14 @@ Shader "Custom/Color"
 			}
 
 			// The Color Parameter
-			fixed4 _Color;
+			// fixed4 _Color;
 
 			// Fragment shader
 			// Returns the color of the pixel at the given position
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// Just return the color specified
-				/*return _Color;*/
+				// return _Color;
 				return fixed4(0,0,1,1);
 			}
 
