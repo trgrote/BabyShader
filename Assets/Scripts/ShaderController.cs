@@ -6,9 +6,6 @@ using System.Collections;
 public class ShaderController : MonoBehaviour 
 {
 	SpriteRenderer renderer;
-	Material _material;
-
-	[Range( 0, 1.0f )] public float percent = 0.5f;
 
 	void Start()
 	{

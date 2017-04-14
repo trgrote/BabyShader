@@ -1,12 +1,12 @@
 ﻿// Shader Name
-// Will be found Under Custom->FlipX
+// Will be found Under Custom->Color
 Shader "Custom/Color"
 {
 	// Properties that can be set by the material and modified by external
 	// scripts
 	Properties
 	{
-		// _Color ("Color Tint", Color) = (1,1,1,1)
+		_Color ("Color Tint", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -52,15 +52,15 @@ Shader "Custom/Color"
 			}
 
 			// The Color Parameter
-			// fixed4 _Color;
+			fixed4 _Color;
 
 			// Fragment shader
 			// Returns the color of the pixel at the given position
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// Just return the color specified
-				// return _Color;
-				return fixed4(0,0,1,1);
+				return _Color;
+				// return fixed4(0,0,1,1);    // rgba ( Red =1, G =1, b =1, A =1)
 			}
 
 			ENDCG

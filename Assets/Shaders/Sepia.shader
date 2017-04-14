@@ -55,7 +55,7 @@
 	            sepia.g = dot(color.rgb, half3(0.349, 0.686, 0.168));   
 	            sepia.b = dot(color.rgb, half3(0.272, 0.534, 0.131));
 
-	            if (i.uv.x < _Percent)
+	             if (i.uv.x < _Percent)
 	            	color.rgb = sepia.rgb;
 
 				return color;
